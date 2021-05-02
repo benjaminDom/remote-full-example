@@ -1,0 +1,16 @@
+extends ./layout.pug
+
+block content
+    h1 This is an example of Reomte Server and remote db 
+    p This project is just to practice
+    hr
+    include ./create.pug
+    hr
+    .row
+        each product in products
+            a(href="/products/"+product._id) 
+                .card(style='width: 18rem;') 
+                    img.card-img-top(src=product.image alt='Image'+product._id)
+                    .card-body
+                        h3.card-title= product.name
+    

@@ -1,0 +1,4 @@
+npm init -y
+go to  package.jason and change  start  to nodemon
+ npm i express nodemon body-parser pug
+npm start

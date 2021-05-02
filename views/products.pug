@@ -1,0 +1,14 @@
+extends ./layout.pug
+
+block content
+  a(href="/" class="btn btn-primary") Home
+  h1="This  is info  about  the shoe" +product.name
+  
+  img(src=product.image)
+  h3= product.name
+  
+  form(action="/products/"+product._id,  method="post")
+    input(type="hidden" name="id"  value=product._id)
+    input(type="text",value=product.name placeholder="product name", required="required", name="product")
+    button Update
+  a(href="/products/delete/"+product._id class="btn btn-danger") Delete
