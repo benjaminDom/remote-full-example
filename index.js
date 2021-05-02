@@ -10,7 +10,7 @@ app.use(express.static('public'));
 //username:summer_shoes
 //password:KKf4U1BrECBqTcSx
 
-var MongoUrl=process.env.MONGO_DB;
+// var MongoUrl=process.env.MONGO_DB;
 
 
 
@@ -27,7 +27,7 @@ var MongoUrl=process.env.MONGO_DB;
 var mongoose = require('mongoose');
 
 //Set up default mongoose connection
-var mongoDB = 'mongodb://summer_shoes:KKf4U1BrECBqTcSx@cluster0-shard-00-00.xos9f.mongodb.net:27017,cluster0-shard-00-01.xos9f.mongodb.net:27017,cluster0-shard-00-02.xos9f.mongodb.net:27017/summer_shoes_db?ssl=true&replicaSet=atlas-cujnvo-shard-0&authSource=admin&retryWrites=true&w=majority';
+var mongoDB = process.env.MONGODB_URL;
 mongoose.connect(mongoDB, { useNewUrlParser: true });
 
 //Get the default connection
